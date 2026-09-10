@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.flag-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: #bc002d;
+  border-radius: 50%;
+}
