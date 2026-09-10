@@ -9,18 +9,14 @@
 .pagination a {
     width: 50px;
     height: 50px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #ddd;
     color: #444;
-
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: 18px;
-
     transition: background-color 0.3s;
 }
 
@@ -28,11 +24,11 @@
     background-color: #bbb;
 }
 
-.pagination a.active {
-    background-color: #0066ff;
+.pagination .active {
+    background-color: #06f;
     color: white;
 }
 
-.pagination a.active:hover {
+.pagination .active:hover {
     background-color: #0052cc;
 }
