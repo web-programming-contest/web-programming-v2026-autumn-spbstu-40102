@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card,
+.image-card,
+.card-title,
+.card-text {
+  padding: 10px;
+}
+
+.card {
+  width: 200px;
+  font-family: Arial;
+}
+
+.image-card {
+  width: 200px;
+  height: 150px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+}
