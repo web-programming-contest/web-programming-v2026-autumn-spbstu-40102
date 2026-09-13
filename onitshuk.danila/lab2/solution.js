@@ -8,30 +8,30 @@ function palindromCenter(str, left, right) {
 }
 
 function findLongestPalindrome(str) {
-  let len = str.length;
+  const len = str.length;
 
   if (len === 0) {
     return '';
   }
 
   let start = 0;
-  let max_len = 1;
+  let maxLen = 1;
 
   for (let i = 0; i < len; i++) {
-    let odd = palindromCenter(str, i, i);
-    let even = palindromCenter(str, i, i + 1);
+    const odd = palindromCenter(str, i, i);
+    const even = palindromCenter(str, i, i + 1);
 
-    if (odd > max_len) {
-      max_len = odd;
+    if (odd > maxLen) {
+      maxLen = odd;
       start = i - (odd - 1) / 2;
     }
-    if (even > max_len) {
-      max_len = even;
+    if (even > maxLen) {
+      maxLen = even;
       start = i - even / 2 + 1;
     }
   }
 
-  return str.substring(start, start + max_len);
+  return str.substring(start, start + maxLen);
 }
 
 export {findLongestPalindrome};
