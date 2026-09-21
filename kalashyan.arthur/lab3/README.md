@@ -13,8 +13,6 @@
 
 ## Запуск
 
-Перейдите в папку лабораторной и выполните команду
-
 ```bash
 node --input-type=module -e "import('./solution.js').then(({chunkArray}) => console.log(chunkArray([1,2,3,4,5], 2)))"
 ```
