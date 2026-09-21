@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Постраничная навигация</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="pagination-card" aria-labelledby="pagination-title">
+        <h1 id="pagination-title">Постраничная навигация</h1>
+        <p class="page-content" aria-live="polite">Содержимое страницы 1</p>
+        <nav class="pagination" aria-label="Постраничная навигация">
+          <a
+            href="#page-3"
+            data-direction="previous"
+            aria-label="Предыдущая страница"
+            >←</a
+          >
+          <a class="active" href="#page-1" data-page="1" aria-current="page"
+            >1</a
+          >
+          <a href="#page-2" data-page="2">2</a>
+          <a href="#page-3" data-page="3">3</a>
+          <a
+            href="#page-2"
+            data-direction="next"
+            aria-label="Следующая страница"
+            >→</a
+          >
+        </nav>
+        <p class="page-status">Страница 1 из 3</p>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
