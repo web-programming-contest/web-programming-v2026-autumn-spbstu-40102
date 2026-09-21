@@ -30,35 +30,44 @@ const move = (direction) => {
 <template>
   <section class="home-carousel site-container">
     <div class="home-carousel__intro">
-      <span class="home-carousel__icon">{{
-        title === 'Хиты продаж' ? '♨' : '✦'
-      }}</span>
+      <img
+        class="home-carousel__icon"
+        :src="
+          title === 'Хиты продаж'
+            ? '/assets/images/icons/hits-icon.svg'
+            : '/assets/images/icons/new-stuff-icon.svg'
+        "
+        alt=""
+      />
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
-      <button
-        class="carousel-arrow carousel-arrow--left"
-        type="button"
-        aria-label="Назад"
-        @click="move(-1)"
-      >
-        ‹
-      </button>
+      <div class="carousel-arrows">
+        <button
+          class="carousel-arrow carousel-arrow--left"
+          type="button"
+          aria-label="Назад"
+          @click="move(-1)"
+        >
+          ‹
+        </button>
+        <button
+          class="carousel-arrow carousel-arrow--right"
+          type="button"
+          aria-label="Вперёд"
+          @click="move(1)"
+        >
+          ›
+        </button>
+      </div>
     </div>
     <div class="home-carousel__products">
       <ProductCard
         v-for="product in visibleProducts"
         :key="product.id"
         :product="product"
+        compact
         @open="emit('open', $event)"
       />
-      <button
-        class="carousel-arrow carousel-arrow--right"
-        type="button"
-        aria-label="Вперёд"
-        @click="move(1)"
-      >
-        ›
-      </button>
     </div>
   </section>
 </template>

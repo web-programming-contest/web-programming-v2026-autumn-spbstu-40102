@@ -60,15 +60,19 @@ onMounted(async () => {
         <h2>Преимущества</h2>
         <div class="benefits-grid">
           <article class="benefit-card">
-            <span>🚀</span
-            ><strong>Утром заказали,<br />вечером получили</strong>
+            <img src="/assets/images/icons/qualities-icon-rocket.svg" alt="" />
+            <strong>Утром заказали,<br />вечером получили</strong>
           </article>
           <article class="benefit-card">
-            <span>₽</span
-            ><strong>С товаром что-то не так?<br />Вернем деньги</strong>
+            <img src="/assets/images/icons/qualities-icon-rub.svg" alt="" />
+            <strong>С товаром что-то не так?<br />Вернем деньги</strong>
           </article>
           <article class="benefit-card">
-            <span>▤</span><strong>Только оригинальные<br />товары</strong>
+            <img
+              src="/assets/images/icons/qualities-icon-certificate.svg"
+              alt=""
+            />
+            <strong>Только оригинальные<br />товары</strong>
           </article>
         </div>
       </section>
@@ -76,9 +80,27 @@ onMounted(async () => {
       <section class="contacts-section site-container">
         <h2>Работаем 24/7</h2>
         <div class="contacts-grid">
-          <span>▯&nbsp; 8 (800) 678-34-24</span>
-          <a href="mailto:gadget@hub.ru">✉&nbsp; gadget@hub.ru</a>
-          <span>●&nbsp; Санкт-Петербург, ул. Барочная, д.7, корпус 2</span>
+          <span
+            ><img
+              class="contacts-grid__icon"
+              src="/assets/images/icons/phone-icon.svg"
+              alt=""
+            />8 (800) 678-34-24</span
+          >
+          <a href="mailto:gadget@hub.ru"
+            ><img
+              class="contacts-grid__icon"
+              src="/assets/images/icons/mail-icon.svg"
+              alt=""
+            />gadget@hub.ru</a
+          >
+          <span
+            ><img
+              class="contacts-grid__icon"
+              src="/assets/images/icons/location-icon.svg"
+              alt=""
+            />Санкт-Петербург, ул. Барочная, д.7, корпус 2</span
+          >
         </div>
       </section>
     </template>

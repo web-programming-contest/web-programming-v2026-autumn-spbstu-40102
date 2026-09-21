@@ -19,7 +19,6 @@ const pendingDelete = ref(null);
 const successModalOpen = ref(false);
 const successOrder = ref(null);
 const successDeliveryType = ref('pickup');
-const successAddress = ref('');
 const checkoutButton = ref(null);
 const submitting = ref(false);
 const form = reactive({
@@ -76,6 +75,18 @@ const allSelected = computed(
       selectedIds.value.includes(item.productId),
     ),
 );
+const pendingDeleteItems = computed(() =>
+  cartProducts.value.filter((item) =>
+    (pendingDelete.value || []).includes(item.productId),
+  ),
+);
+const deleteConfirmationText = computed(() => {
+  if (pendingDeleteItems.value.length === 1) {
+    return `Вы действительно хотите удалить ${pendingDeleteItems.value[0].product.name}?`;
+  }
+
+  return 'Вы действительно хотите удалить выбранные товары?';
+});
 
 watch(
   cartProducts,
@@ -142,7 +153,6 @@ const submitOrder = async () => {
     });
     successOrder.value = result.order;
     successDeliveryType.value = form.deliveryType;
-    successAddress.value = form.address;
     for (const {productId} of items) cart.remove(productId);
     await loadOrders().catch(() => undefined);
     successModalOpen.value = true;
@@ -199,8 +209,7 @@ onMounted(async () => {
         <div v-for="order in orders" :key="order.id" class="orders-table__row">
           <span>№ {{ order.id }} от {{ formatDate(order.createdAt) }}</span>
           <span
-            >{{ order.itemCount }}
-            {{ order.itemCount === 1 ? 'товар' : 'товара' }}</span
+            >{{ order.itemCount }} {{ quantityLabel(order.itemCount) }}</span
           >
           <strong>{{ formatPrice(order.totalKopecks) }}</strong>
         </div>
@@ -266,7 +275,11 @@ onMounted(async () => {
       </div>
 
       <div v-else class="empty-cart">
-        <span class="empty-cart__icon">🛒</span>
+        <img
+          class="empty-cart__icon"
+          src="/assets/images/empty-cart.png"
+          alt=""
+        />
         <h1>Пока пусто</h1>
         <p>
           Ознакомьтесь с новинками и хитами на главной<br />или найдите нужное в
@@ -321,7 +334,7 @@ onMounted(async () => {
           </fieldset>
           <label
             v-if="form.deliveryType === 'delivery'"
-            class="form-field"
+            class="form-field checkout-card__address"
             :class="{'form-field--error': errors.address}"
             >Адрес доставки<input
               v-model="form.address"
@@ -355,9 +368,9 @@ onMounted(async () => {
     </template>
 
     <BaseModal v-model="deleteModalOpen" title="Подтверждение удаления" narrow>
-      <div class="confirm-modal">
-        <h2>Вы действительно хотите удалить товар?</h2>
-        <div>
+      <div class="confirm-modal confirm-modal--delete">
+        <h2>{{ deleteConfirmationText }}</h2>
+        <div class="confirm-modal__actions">
           <button
             class="button button--link"
             type="button"
@@ -375,15 +388,19 @@ onMounted(async () => {
       </div>
     </BaseModal>
     <BaseModal v-model="successModalOpen" title="Заказ оформлен" narrow>
-      <div class="confirm-modal">
-        <span class="success-icon">☺</span>
+      <div class="success-modal">
+        <img
+          class="success-modal__icon"
+          src="/assets/images/thanks-smiley.png"
+          alt=""
+        />
         <h2>Спасибо за заказ!</h2>
-        <p v-if="successOrder">Заказ №{{ successOrder.id }} оформлен.</p>
+        <p v-if="successOrder">Номер заказа {{ successOrder.id }}.</p>
         <p v-if="successDeliveryType === 'delivery'">
-          Доставим по адресу: {{ successAddress }}
+          Мы свяжемся с вами в течение 10 минут, чтобы уточнить удобное для вас
+          время доставки.
         </p>
-        <p v-else>Заказ можно забрать самовывозом.</p>
-        <p>Мы свяжемся с вами в течение 10 минут.</p>
+        <p v-else>Заказ можно забрать самовывозом в удобное для вас время.</p>
         <button
           class="button button--blue"
           type="button"

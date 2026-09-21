@@ -12,7 +12,7 @@ const router = createRouter({
   routes: [
     {path: '/', component: HomeView},
     {path: '/login', component: LoginView},
-    {path: '/catalog', component: CatalogView},
+    {path: '/catalog', component: CatalogView, meta: {requiresAuth: true}},
     {path: '/cart', component: CartView, meta: {requiresAuth: true}},
     {path: '/:pathMatch(.*)*', component: NotFoundView},
   ],
