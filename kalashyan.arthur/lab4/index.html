@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Команды и участники</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Рабочие команды</h1>
+      </div>
+    </header>
+    <main class="workspace">
+      <section class="create-panel" aria-labelledby="create-title">
+        <div>
+          <h2 id="create-title">Добавьте команду</h2>
+        </div>
+        <form class="team-form" data-testid="entity-form">
+          <label>
+            Название
+            <input
+              name="name"
+              type="text"
+              placeholder="Например, Design Crew"
+              autocomplete="off"
+              required
+            />
+          </label>
+          <button class="primary-button" type="submit">Добавить команду</button>
+        </form>
+      </section>
+      <section class="teams-section" aria-labelledby="teams-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Состав</p>
+            <h2 id="teams-title">Ваши команды</h2>
+          </div>
+          <p class="status" aria-live="polite"></p>
+        </div>
+        <div class="team-grid" data-testid="entity-list"></div>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
