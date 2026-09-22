@@ -1,0 +1,103 @@
+:root {
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background: #080808;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #080808;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-card {
+  width: min(100%, 520px);
+  padding: 36px 24px;
+  text-align: center;
+  background: #141414;
+  border: 1px solid #333;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
+}
+
+.page-content {
+  min-height: 54px;
+  margin: 0 0 24px;
+  padding: 16px;
+  color: #d0d0d0;
+  background: #0b0b0b;
+  border-left: 4px solid #d72638;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination a {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  color: #f5f5f5;
+  font-weight: 700;
+  text-decoration: none;
+  background: #292929;
+  border: 1px solid #3d3d3d;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination a:hover {
+  background: #a71927;
+}
+
+.pagination a:focus-visible {
+  outline: 2px solid #ff4d5e;
+  outline-offset: 3px;
+}
+
+.pagination .active {
+  color: #fff;
+  background: #d72638;
+  border-color: #d72638;
+}
+
+.page-status {
+  margin: 18px 0 0;
+  color: #8f8f8f;
+  font-size: 0.85rem;
+}
+
+@media (width <= 480px) {
+  .page {
+    padding: 14px;
+  }
+
+  .pagination-card {
+    padding: 28px 14px;
+  }
+
+  .pagination a {
+    width: 42px;
+    height: 42px;
+  }
+}
