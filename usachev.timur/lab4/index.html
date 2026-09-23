@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказы</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Заказы</h1>
+
+      <form data-testid="entity-form">
+        <label>
+          ID заказа
+          <input name="orderId" type="number" min="1" required />
+        </label>
+        <label>
+          Статус
+          <select name="status">
+            <option value="new">Новый</option>
+            <option value="processing">В обработке</option>
+            <option value="completed">Выполнен</option>
+          </select>
+        </label>
+        <button type="submit">Добавить заказ</button>
+      </form>
+
+      <section data-testid="entity-list" aria-label="Список заказов"></section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

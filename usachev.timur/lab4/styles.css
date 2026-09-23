@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: min(900px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+form,
+.order-card {
+  padding: 20px;
+  border: 1px solid #b5b5b5;
+  background-color: #fff;
+}
+
+form,
+.order-fields,
+.item-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 5px;
+}
+
+input,
+select,
+button {
+  min-height: 34px;
+  padding: 6px 8px;
+  border: 1px solid #888;
+  border-radius: 2px;
+  font: inherit;
+}
+
+button {
+  color: #fff;
+  border-color: #1f5f97;
+  background-color: #286aa3;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1f5f97;
+}
+
+[data-testid='entity-list'] {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin: 20px 0 8px;
+  font-size: 1rem;
+}
+
+.item-list {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-list button,
+[data-testid='delete-entity'] {
+  background-color: #8b3131;
+  border-color: #752828;
+}
+
+.item-list button:hover,
+[data-testid='delete-entity']:hover {
+  background-color: #752828;
+}
+
+.total {
+  font-weight: 700;
+}
+
+@media (width <= 600px) {
+  main {
+    width: min(100% - 20px, 900px);
+    margin: 16px auto;
+  }
+
+  form,
+  .order-card {
+    padding: 14px;
+  }
+
+  .order-head,
+  .item-list li {
+    align-items: start;
+    flex-direction: column;
+  }
+}
