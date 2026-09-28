@@ -1,0 +1,51 @@
+.history {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  cursor: default;
+
+  .order {
+    position: relative;
+    display: flex;
+    gap: 1em;
+    padding: 24px 0;
+
+    .date {
+      width: 550px;
+    }
+
+    .quantity {
+      width: 300px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: var(--goods-line);
+      border-radius: 8px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+.emptyHistory {
+  p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  span {
+    color: var(--sub-text);
+  }
+}

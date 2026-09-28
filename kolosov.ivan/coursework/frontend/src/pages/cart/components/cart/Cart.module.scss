@@ -1,0 +1,75 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: var(--login-input);
+
+    &:checked {
+      background: var(--light-blue);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px;
+      background-image: url("/src/assets/images/icons/checkmark.png");
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .goods {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .checkAllWrapper {
+      display: flex;
+      gap: 3em;
+
+      .checkAll {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .delete {
+         display: flex;
+         align-items: center;
+         gap: 1em;
+         border: none;
+         color: var(--pink);
+         background-color: transparent;
+         transition: 0.3s ease;
+         font-size: 16px;
+
+         img {
+           width: 16px;
+         }
+
+         &:hover {
+           cursor: pointer;
+         }
+       }
+    }
+  }
+
+  .summary {
+    padding: 30px 140px 50px 0;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 24px;
+    cursor: default;
+  }
+}

@@ -1,0 +1,38 @@
+.slider {
+  :global(.noUi-target) {
+    border: none;
+    box-shadow: none;
+    background: var(--login-input);
+    height: 4px;
+  }
+
+  :global(.noUi-connect) {
+    background: var(--price-slider-green);
+  }
+
+  :global(.noUi-handle) {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    background: var(--light-blue);
+    border: none;
+    box-shadow: none;
+    right: -10px !important;
+    top: -8px !important;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: var(--blue-button-hover);
+      cursor: pointer;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  :global(.noUi-handle::before),
+  :global(.noUi-handle::after) {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Rubick';
+    src: url(./assets/fonts/rubick/Rubik-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: 'Rubick', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+:root {
+    --light-blue: #115EFB;
+    --footer-background: #0C368A;
+    --footer-sub-text: #84ADFF;
+    --footer-main-text: #B7CEFF;
+    --sub-text: #484848;
+    --product-background: #F3F6FA;
+    --login-background: #E5EEFF;
+    --login-input: #E4E7EB;
+    --login-active-bg: #f3f6fa;
+    --pink: #FF60C3;
+    --pink-hover: #cd3c96;
+    --pale-blue: #84adff;
+    --arrow-hover-bg: #f3f6fa;
+    --focus-blue:  #84adff;
+    --blue-button-hover: #0c368a;
+    --blue-button-disabled: #84adff;
+    --selected-sort-bg: #84adff;
+    --price-slider-green: #00e398;
+    --specs-line:  #b9b9b9;
+    --cart-pages-line: #AEBDDB;
+    --cart-bg: #f3f6fa;
+    --goods-line: #f1f3f5;
+    --drop-down-hover:  #aebddb;
+    --blue-border: #95b8fe;
+
+    --card-width: 320px;
+    --card-height: 424px;
+}
+

@@ -1,0 +1,23 @@
+.wrapper {
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+
+  p {
+    margin: 8px 0;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .text {
+    color: var(--sub-text);
+  }
+
+  img {
+    width: 40px
+  }
+}

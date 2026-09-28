@@ -1,0 +1,48 @@
+.checkBoxes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease,
+                margin 0.3s ease;
+
+    &:hover {
+      margin-left: 8px;
+      background-color: var(--arrow-hover-bg);
+      cursor: pointer;
+    }
+
+    &:focus-within {
+      outline: 2px solid var(--focus-blue);
+      background-color: var(--arrow-hover-bg);
+    }
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: var(--login-input);
+  }
+
+  input[type="checkbox"]:checked {
+    background: var(--light-blue);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-image: url("/src/assets/images/icons/checkmark.png");
+  }
+
+  input[type="checkbox"]:focus {
+    outline: none;
+  }
+}

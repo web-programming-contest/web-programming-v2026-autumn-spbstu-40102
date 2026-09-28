@@ -1,0 +1,10 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
