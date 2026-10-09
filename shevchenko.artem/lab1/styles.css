@@ -22,13 +22,13 @@ body {
 }
 
 .completed::before {
-  content: "✅";
+  content: '✅';
 }
 
 .aborted::before {
-  content: "❌";
+  content: '❌';
 }
 
 .process::before {
-  content: "⏳";
+  content: '⏳';
 }
