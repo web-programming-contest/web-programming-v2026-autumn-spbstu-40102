@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+
+.tasks {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+.tasks li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+.tasks li::before {
+  margin-right: 10px;
+}
+
+.tasks li.completed::before {
+  content: "✅";
+}
+
+
+.tasks li.aborted::before {
+  content: "❌";
+}
+
+
+.tasks li.process::before {
+  content: "⏳";
+}
