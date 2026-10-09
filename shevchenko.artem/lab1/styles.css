@@ -7,33 +7,28 @@ body {
   padding: 20px;
 }
 
-
 .tasks {
   list-style-type: none;
   padding-left: 0;
 }
-
 
 .tasks li {
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-
 .tasks li::before {
   margin-right: 10px;
 }
 
-.tasks li.completed::before {
+.completed::before {
   content: "✅";
 }
 
-
-.tasks li.aborted::before {
+.aborted::before {
   content: "❌";
 }
 
-
-.tasks li.process::before {
+.process::before {
   content: "⏳";
 }
