@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.reg-form {
+  padding: 16px;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
