@@ -1,0 +1,103 @@
+.select {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-bottom: 4px;
+    font-size: 14px;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    border: none;
+    border-radius: 10px;
+    width: 286px;
+    height: 48px;
+    transition: 0.3s ease;
+    font-size: 16px;
+
+    .placeholder {
+      color: var(--specs-line);
+    }
+
+    .value {
+      color: black;
+    }
+
+    &:hover {
+      outline: 1px solid var(--blue-border);
+      transition: none;
+      cursor: pointer;
+    }
+  }
+
+  .buttonOpen {
+    outline: 1px solid var(--blue-border);
+    background-color: var(--login-active-bg) !important;
+  }
+
+  .buttonClosed {
+    &:focus {
+      outline: 3px solid var(--blue-border);
+      transition: none;
+    }
+  }
+
+  .filled {
+    background-color: var(--login-active-bg);
+  }
+
+  .empty {
+    background-color: var(--login-input);
+  }
+
+  .errorInput {
+    outline: 1px solid var(--pink) !important;
+    transition: none;
+  }
+
+  .arrow {
+    margin-left: auto;
+    margin-right: 10px;
+    color: var(--light-blue);
+    width: 12px;
+  }
+
+  .open {
+    transform: rotate(180deg);
+  }
+
+  .options {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 286px;
+    border-radius: 10px;
+    background-color: var(--login-active-bg);
+    transition: 0.3s ease;
+    outline: 1px solid var(--blue-border);
+
+    li {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      width: 270px;
+      padding-left: 1em;
+      height: 48px;
+      transition: 0.3s ease;
+
+      &:hover {
+        overflow: hidden;
+        background-color: var(--drop-down-hover);
+        cursor: pointer;
+      }
+    }
+  }
+}

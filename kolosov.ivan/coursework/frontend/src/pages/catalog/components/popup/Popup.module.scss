@@ -1,0 +1,145 @@
+.popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+
+  .bg {
+    background-color: black;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    padding: 105px 156px;
+    background-color: white;
+    width: 1028px;
+    min-height: 521px;
+    border-radius: 30px;
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 14px;
+
+    .cross {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: none;
+      border-radius: 50%;
+      position: absolute;
+      right: 20px;
+      top: 26px;
+
+      img {
+        width: 20px;
+      }
+
+      &:hover {
+        background-color: var(--arrow-hover-bg);
+        cursor: pointer;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+
+      .productImgContainer {
+        border-radius: 1em;
+        background-color: var(--product-background);
+        width: 392px;
+        height: 440px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .productImg {
+          width: 50%;
+          mix-blend-mode: multiply;
+        }
+      }
+
+      .content {
+        width: 604px;
+        padding-left: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+
+          p {
+            font-weight: 500;
+            font-size: 32px;
+            margin: 0;
+          }
+
+          .stars {
+            color: var(--sub-text);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            img {
+              width: 20px;
+            }
+          }
+        }
+
+        .description {
+          color: var(--sub-text);
+        }
+
+        .specs {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+
+          p {
+            font-weight: 500;
+            font-size: 20px;
+            margin: 0;
+          }
+
+          .specsRow {
+            display: flex;
+            align-items: flex-start;
+
+            .specsLabel {
+              color: var(--sub-text);
+            }
+
+            .specsLine {
+              flex: 1 1 auto;
+              margin: 18px 2px 0 2px;
+              border-bottom: 1px solid var(--specs-line);
+            }
+
+            .specsValue {
+              max-width: 240px;
+              color: var(--sub-text);
+            }
+          }
+        }
+
+        .price {
+          font-weight: 500;
+          font-size: 32px;
+          margin: auto 0 0 auto;
+        }
+      }
+    }
+  }
+}

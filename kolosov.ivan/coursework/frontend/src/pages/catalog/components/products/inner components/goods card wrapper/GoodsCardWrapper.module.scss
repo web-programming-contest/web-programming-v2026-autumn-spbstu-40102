@@ -1,0 +1,14 @@
+.card {
+  height: calc(var(--card-height) + 70px);
+  padding-bottom: 14px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}

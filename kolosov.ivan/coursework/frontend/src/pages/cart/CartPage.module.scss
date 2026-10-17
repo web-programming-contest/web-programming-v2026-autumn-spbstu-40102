@@ -1,0 +1,55 @@
+.bg {
+  min-height: 610px;
+  height: 100%;
+  background-color: var(--cart-bg);
+
+  .cartPage {
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+
+    .subPage {
+      font-size: 24px;
+      font-weight: 500;
+      position: relative;
+      color: var(--light-blue);
+      padding: 20px 40px;
+      border-bottom: 2px solid var(--cart-pages-line);
+      transition: color 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: var(--light-blue);
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:has(input:checked) {
+        color: black;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}

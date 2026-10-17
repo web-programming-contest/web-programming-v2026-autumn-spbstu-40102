@@ -1,0 +1,18 @@
+.login {
+  background-color: var(--login-background);
+  background-image: url('../../assets/images/backgrounds/login.png');
+  background-size: 1920px 900px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 940px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}

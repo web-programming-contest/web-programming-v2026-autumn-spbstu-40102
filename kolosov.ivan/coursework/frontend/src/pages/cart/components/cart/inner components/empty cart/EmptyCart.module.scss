@@ -1,0 +1,57 @@
+.emptyCart {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  cursor: default;
+
+  img {
+    width: 150px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  span {
+    width: 392px;
+    color: var(--sub-text);
+  }
+
+  .buttons {
+    display: flex;
+    gap: 8px;
+
+    button {
+      font-weight: 500;
+      width: 212px;
+      height: 48px;
+      border: none;
+      transition: 0.3s ease;
+    }
+
+    .toCart {
+      color: white;
+      background-color: var(--light-blue);
+      border-radius: 10px;
+
+      &:hover {
+        background-color: var(--blue-button-hover);
+        cursor: pointer;
+      }
+    }
+
+    .toHome {
+      color: var(--light-blue);
+      background-color: transparent;
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--blue-button-hover);
+        cursor: pointer;
+      }
+    }
+  }
+}

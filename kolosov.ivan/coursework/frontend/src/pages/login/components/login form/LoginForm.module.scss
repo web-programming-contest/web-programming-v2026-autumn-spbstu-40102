@@ -1,0 +1,95 @@
+.loginForm {
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 286px;
+    height: 248px;
+    border-radius: 10px;
+    background: white;
+    padding: 48px;
+    gap: 24px;
+
+    .wrapper {
+      position: relative;
+
+      p {
+        margin: 4px 0;
+      }
+
+      span {
+        position: absolute;
+        top: 14px;
+        right: -14px;
+        font-size: 24px;
+        color: var(--pink);
+      }
+
+      input {
+        padding-left: 8px;
+        background-color: var(--login-input);
+        border: none;
+        border-radius: 10px;
+        width: 278px;
+        height: 48px;
+
+        &:hover {
+          outline: 1px solid var(--blue-border);
+          transition: none;
+        }
+
+        &:active {
+          background-color: var(--login-active-bg);
+          outline: 1px solid var(--blue-border);
+        }
+
+        &:focus {
+          outline: 3px solid var(--blue-border);
+          transition: none;
+        }
+
+        &:not(:placeholder-shown) {
+          background-color: var(--login-active-bg);
+        }
+
+        &:placeholder-shown {
+          color: var(--specs-line);
+        }
+
+        &.error {
+          outline: 1px solid var(--pink);
+        }
+      }
+    }
+
+    button {
+      background-color: var(--light-blue);
+      border: none;
+      border-radius: 10px;
+      width: 120px;
+      height: 48px;
+      color: white;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: var(--blue-button-hover);
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline-color: var(--focus-blue);
+      }
+
+      &:disabled {
+        background-color: var(--blue-button-disabled);
+      }
+    }
+
+    .errorText {
+      position: absolute;
+      bottom: -24px;
+      color: var(--pink);
+    }
+  }
+}
