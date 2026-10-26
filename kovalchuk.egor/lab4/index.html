@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Учёт путешествий и посещённых стран. Лабораторная работа 4, вариант 40."
+    />
+    <title>Путешествия — вариант 40</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <p class="eyebrow">Лабораторная работа 4 · Вариант 40</p>
+        <h1>Путешествия и страны</h1>
+        <p>
+          Веди список путешественников и отмечай страны, в которых они побывали.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="create-heading">
+        <h2 id="create-heading">Новое путешествие</h2>
+        <form class="create-form" data-testid="entity-form">
+          <label
+            >ID путешествия
+            <input
+              name="id"
+              type="number"
+              step="any"
+              required
+              placeholder="Например, 1"
+            />
+          </label>
+          <label
+            >Имя путешественника
+            <input
+              name="travelerName"
+              type="text"
+              required
+              maxlength="120"
+              placeholder="Например, Егор"
+            />
+          </label>
+          <button type="submit">Добавить путешествие</button>
+        </form>
+        <p class="hint">
+          ID должен быть уникальным. Страны можно добавить в карточке.
+        </p>
+      </section>
+
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+
+      <section aria-labelledby="travels-heading">
+        <div class="section-header">
+          <h2 id="travels-heading">Список путешествий</h2>
+          <p class="summary" id="summary"></p>
+        </div>
+        <div class="travel-list" data-testid="entity-list"></div>
+      </section>
+
+      <section class="analytics" aria-labelledby="analytics-heading">
+        <h2 id="analytics-heading">Обзор путешествий</h2>
+        <div class="analytics-grid">
+          <section class="panel" aria-labelledby="unique-heading">
+            <h3 id="unique-heading">Все посещённые страны</h3>
+            <p id="unique-countries"></p>
+          </section>
+          <section class="panel" aria-labelledby="count-heading">
+            <h3 id="count-heading">По количеству стран</h3>
+            <div id="count-groups"></div>
+          </section>
+          <section class="panel" aria-labelledby="country-heading">
+            <h3 id="country-heading">Путешественники по странам</h3>
+            <div id="country-groups"></div>
+          </section>
+          <section class="panel" aria-labelledby="filter-heading">
+            <h3 id="filter-heading">Найти путешествия</h3>
+            <label
+              >Посетили страну
+              <input
+                id="country-filter"
+                type="text"
+                placeholder="Точное название страны"
+              />
+            </label>
+            <p id="country-results"></p>
+            <label
+              >Посетили более N стран
+              <input
+                id="count-filter"
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+              />
+            </label>
+            <p id="count-results"></p>
+          </section>
+        </div>
+      </section>
+      <footer>
+        Ковальчук Егор · kovalchuk.egor · Данные сохраняются в этом браузере.
+      </footer>
+    </main>
+  </body>
+</html>
