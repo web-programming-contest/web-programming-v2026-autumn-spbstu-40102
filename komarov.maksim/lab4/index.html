@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>Студенты — лабораторная работа 4</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">ВЕБ-ПРОГРАММИРОВАНИЕ / ВАРИАНТ 2</p>
+          <h1>Управление студентами</h1>
+          <p class="subtitle">
+            Добавляйте студентов, предметы и оценки. Изменения сохраняются в
+            браузере.
+          </p>
+        </div>
+        <span class="project-label">Лабораторная №4</span>
+      </header>
+
+      <section class="statistics" aria-label="Статистика">
+        <div class="stat-card">
+          <span class="stat-title">Студентов</span>
+          <strong class="stat-value" data-testid="student-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Предметов</span>
+          <strong class="stat-value" data-testid="subject-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Средний балл группы</span>
+          <strong class="stat-value" data-testid="group-average">—</strong>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="add-student-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="add-student-title">Новый студент</h2>
+            <p class="section-description">
+              Введите уникальный числовой ID и имя студента.
+            </p>
+          </div>
+        </div>
+        <form class="student-form" data-testid="entity-form">
+          <label class="field">
+            <span>ID студента</span>
+            <input
+              name="id"
+              type="number"
+              step="any"
+              placeholder="Например, 101"
+              required
+            />
+          </label>
+          <label class="field field-name">
+            <span>Имя студента</span>
+            <input
+              name="name"
+              type="text"
+              maxlength="80"
+              placeholder="Например, Анна Смирнова"
+              required
+            />
+          </label>
+          <button
+            class="button button-primary"
+            type="submit"
+            data-testid="add-entity"
+          >
+            Добавить студента
+          </button>
+        </form>
+        <p
+          class="message"
+          data-testid="message"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </section>
+
+      <section class="students-section" aria-labelledby="students-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="students-heading">Список студентов</h2>
+            <p class="section-description">
+              У каждого студента можно добавить, изменить или удалить оценку.
+            </p>
+          </div>
+        </div>
+        <div class="student-list" data-testid="entity-list"></div>
+      </section>
+    </main>
+  </body>
+</html>

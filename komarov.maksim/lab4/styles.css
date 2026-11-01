@@ -1,0 +1,383 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #19243d;
+  background: #f6f7fb;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.page {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 44px 24px 80px;
+}
+
+.page-header,
+.section-heading,
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #4663ad;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-bottom: 7px;
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle,
+.section-description {
+  color: #68768e;
+  line-height: 1.55;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+.section-description {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.project-label {
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border: 1px solid #dbe3f2;
+  border-radius: 100px;
+  color: #4663ad;
+  background: #eaf0fc;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.stat-card,
+.panel,
+.student-card {
+  border: 1px solid #e4e8f0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 25px rgb(26 46 82 / 0.03);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 21px 24px;
+}
+
+.stat-title {
+  color: #68768e;
+  font-size: 13px;
+}
+
+.stat-value {
+  color: #233e77;
+  font-size: 30px;
+  letter-spacing: -0.04em;
+}
+
+.panel {
+  padding: 28px;
+  margin-bottom: 36px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.student-form,
+.grade-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 9px;
+  min-width: 0;
+  color: #354560;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.grade-form .field {
+  font-size: 12px;
+}
+
+.student-form .field:first-child {
+  max-width: 180px;
+}
+
+.field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 13px;
+  border: 1px solid #d8e0ec;
+  border-radius: 9px;
+  outline-offset: 2px;
+  background: #fff;
+  color: #19243d;
+}
+
+.field input:focus {
+  outline: 2px solid #9eb8ef;
+  border-color: #5276cc;
+}
+
+.field input::placeholder {
+  color: #a5afc0;
+}
+
+.button {
+  min-height: 43px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 10px 17px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.15s ease;
+}
+
+.button-primary {
+  flex-shrink: 0;
+  color: #fff;
+  background: #3465ca;
+}
+
+.button-primary:hover {
+  background: #2454b7;
+}
+
+.button-secondary {
+  flex-shrink: 0;
+  background: #eaf0fc;
+  color: #244d9a;
+}
+
+.button-secondary:hover {
+  background: #dce8fc;
+}
+
+.button-danger {
+  border-color: #f4d7dc;
+  background: #fff2f3;
+  color: #ae3e50;
+}
+
+.button-danger:hover {
+  background: #fce5e8;
+}
+
+.button-small {
+  min-height: 33px;
+  padding: 7px 11px;
+  font-size: 12px;
+}
+
+.message {
+  min-height: 18px;
+  margin: 12px 0 0;
+  color: #286d49;
+  font-size: 13px;
+}
+
+.message-error {
+  color: #a93247;
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.student-card {
+  min-width: 0;
+  padding: 23px;
+}
+
+.student-id {
+  display: block;
+  margin-bottom: 7px;
+  color: #71809a;
+  font-size: 12px;
+}
+
+.student-name {
+  margin: 0;
+  font-size: 19px;
+  overflow-wrap: anywhere;
+}
+
+.average {
+  display: inline-flex;
+  margin: 20px 0 22px;
+  padding: 8px 11px;
+  border-radius: 8px;
+  color: #2454a0;
+  background: #eaf1fc;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.grades-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.grades-list {
+  min-height: 42px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.grade-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #eff2f7;
+}
+
+.grade-description {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.grades-empty {
+  padding: 9px 0;
+  color: #8995aa;
+  font-size: 13px;
+}
+
+.grade-form {
+  padding-top: 18px;
+  border-top: 1px solid #eff2f7;
+}
+
+.grade-form .field:nth-child(2) {
+  max-width: 85px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 45px 20px;
+  border: 1px dashed #ccd6e7;
+  border-radius: 14px;
+  color: #7b889f;
+  text-align: center;
+}
+
+@media (width <= 850px) {
+  .student-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 650px) {
+  .page {
+    padding: 25px 15px 60px;
+  }
+
+  .page-header,
+  .card-top {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .statistics {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 15px 12px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+
+  .panel,
+  .student-card {
+    padding: 19px;
+  }
+
+  .student-form,
+  .grade-form {
+    flex-wrap: wrap;
+  }
+
+  .student-form .field:first-child,
+  .grade-form .field:nth-child(2) {
+    max-width: none;
+  }
+
+  .student-form .button-primary,
+  .grade-form .button-secondary {
+    width: 100%;
+  }
+}
