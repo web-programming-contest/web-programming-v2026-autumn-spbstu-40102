@@ -1,0 +1,14 @@
+/target/
+.kotlin/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+node_modules/
+/frontend/dist/
+/data/
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+pnpm-lock.yaml
+!/frontend/.env.local
