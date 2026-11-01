@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мероприятия и участники</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1 class="page-title">Мероприятия и участники</h1>
+
+      <section class="panel">
+        <h2 class="panel-title">Новое мероприятие</h2>
+        <form class="form" data-testid="entity-form">
+          <label class="field">
+            <span class="field-label">ID</span>
+            <input class="field-input" name="id" type="number" required />
+          </label>
+          <label class="field">
+            <span class="field-label">Название</span>
+            <input class="field-input" name="title" type="text" required />
+          </label>
+          <label class="field">
+            <span class="field-label">Дата</span>
+            <input class="field-input" name="date" type="date" required />
+          </label>
+          <button class="button" type="submit">Добавить мероприятие</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel-title">Участники</h2>
+        <form class="form participant-form">
+          <label class="field">
+            <span class="field-label">Мероприятие</span>
+            <select class="field-input" name="eventId"></select>
+          </label>
+          <label class="field">
+            <span class="field-label">Имя участника</span>
+            <input class="field-input" name="participant" type="text" />
+          </label>
+          <div class="actions">
+            <button class="button" type="submit">Добавить участника</button>
+            <button
+              class="button button-secondary remove-participant"
+              type="button"
+            >
+              Удалить участника
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <p class="message" aria-live="polite"></p>
+
+      <ul class="event-list" data-testid="entity-list"></ul>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-family: system-ui, sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 28px;
+}
+
+.panel {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.1);
+}
+
+.panel-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.field-input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.field-input:focus {
+  border-color: #2563eb;
+  outline: 2px solid #bfdbfe;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+.button-secondary {
+  background-color: #475569;
+}
+
+.button-secondary:hover {
+  background-color: #334155;
+}
+
+.button-danger {
+  background-color: #dc2626;
+}
+
+.button-danger:hover {
+  background-color: #b91c1c;
+}
+
+.message {
+  margin: 0;
+  min-height: 1.2em;
+  color: #dc2626;
+}
+
+.event-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.1);
+}
+
+.event-card-title {
+  margin: 0;
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+.event-card-date,
+.event-card-count {
+  margin: 0;
+  color: #64748b;
+}
+
+.participants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.participants-item {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.event-card .button {
+  align-self: flex-start;
+}
+
+@media (width <= 480px) {
+  .actions {
+    flex-direction: column;
+  }
+}
