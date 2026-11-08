@@ -1,0 +1,48 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.page {
+  width: 32px;
+  height: 32px;
+  border-radius: $radius-round;
+  background-color: $white;
+  color: $primary;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  background-color: $primary;
+  color: $white;
+}
+
+.dots {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+}
+
+.arrowPrev {
+}
+
+.arrowNext {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  visibility: hidden;
+}

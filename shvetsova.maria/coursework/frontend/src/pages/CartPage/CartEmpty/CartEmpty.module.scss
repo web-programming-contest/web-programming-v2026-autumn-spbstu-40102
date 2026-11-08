@@ -1,0 +1,42 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.image {
+  width: 121px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.text {
+  margin-bottom: 36px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $grey-dark;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 500;
+  color: $primary;
+  transition: color $transition;
+
+  &:hover {
+    color: $primary-hover;
+  }
+}

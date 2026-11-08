@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+
+body {
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: $black;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+.h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h3,
+.h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.body-m {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.body-s {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: 500;
+}

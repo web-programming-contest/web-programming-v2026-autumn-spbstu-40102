@@ -1,0 +1,97 @@
+.range {
+}
+
+.fields {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.field {
+  appearance: textfield;
+}
+
+.label {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.input {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  flex-grow: 0;
+  width: 128px;
+  height: 48px;
+  padding: 12px 16px;
+  border: none;
+  background-color: $input;
+  border-radius: $radius-s;
+  margin-top: 4px;
+
+  &:focus,
+  &:focus-visible {
+    outline-color: $focus;
+  }
+}
+
+.slider {
+  position: relative;
+  height: 20px;
+  width: 288px;
+}
+
+.track {
+  width: 288px;
+  position: absolute;
+  background-color: $input;
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.fill {
+  width: 288px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $green;
+  z-index: 67;
+}
+
+.thumb {
+  &::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    pointer-events: auto;
+    background-color: $primary;
+    border-radius: $radius-round;
+  }
+
+  &::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    pointer-events: auto;
+    background-color: $primary;
+    border-radius: $radius-round;
+  }
+
+  appearance: none;
+  width: 288px;
+  position: absolute;
+  background: transparent;
+  margin: 0;
+  pointer-events: none;
+  z-index: 67;
+}
+
+.thumbTop {
+  z-index: 69;
+}

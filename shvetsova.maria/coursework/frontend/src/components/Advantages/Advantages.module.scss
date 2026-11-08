@@ -1,0 +1,28 @@
+.section {
+  margin-bottom: 100px;
+}
+
+.title {
+  margin-bottom: 47px;
+}
+
+.list {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background-color: $grey-light;
+  padding: 32px;
+  border-radius: $radius-2xl;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+}
+
+.text {
+  margin-top: 20px;
+}

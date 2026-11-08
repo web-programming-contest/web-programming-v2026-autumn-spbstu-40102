@@ -1,0 +1,51 @@
+@use '@/styles/abstracts/variables' as *;
+
+.footer {
+  background-color: $footer-bg;
+  height: 208px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 650px 1fr auto;
+  padding-top: 40px;
+}
+
+.brand {
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: $footer-text;
+  margin-bottom: 4px;
+}
+
+.slogan,
+.copyright {
+  color: $primary-disabled;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: $footer-text;
+}
+
+.phoneIcon {
+  background-color: $footer-text;
+  width: 22px;
+  height: 32px;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.social {
+  width: 36px;
+  height: 36px;
+}

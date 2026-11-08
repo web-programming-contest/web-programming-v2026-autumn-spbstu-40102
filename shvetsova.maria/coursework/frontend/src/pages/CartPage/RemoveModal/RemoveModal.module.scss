@@ -1,0 +1,49 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  padding-right: 32px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: $grey-dark;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.cancel {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: $secondary;
+  cursor: pointer;
+  transition: color $transition;
+
+  &:hover {
+    color: $secondary-hover;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $focus;
+    outline-offset: 4px;
+  }
+}

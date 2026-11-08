@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as *;
+
+.wrapper {
+  width: $container-width;
+  margin: 0 auto;
+}
