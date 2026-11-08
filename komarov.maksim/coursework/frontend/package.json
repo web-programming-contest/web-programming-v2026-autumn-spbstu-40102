@@ -1,0 +1,20 @@
+{
+  "name": "gadget-hub-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node_modules/.bin/vite --host 0.0.0.0 --port 3000 --strictPort",
+    "build": "node_modules/.bin/vite build",
+    "preview": "node_modules/.bin/vite preview --host 0.0.0.0 --port 3000",
+    "test": "node --test src/shop.test.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.2.1",
+    "lucide-react": "^1.70.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
+    "vite": "^8.3.6"
+  }
+}
