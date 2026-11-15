@@ -1,0 +1,51 @@
+.field {
+  &:focus-within .label {
+    color: $primary;
+  }
+
+  &:focus-within {
+    color: $primary;
+  }
+}
+
+.label {
+}
+
+.control {
+  position: relative;
+  width: fit-content;
+}
+
+.input {
+  height: 48px;
+  width: 286px;
+  background-color: $input;
+  border-radius: $radius-s;
+  border: none;
+  padding: 0 16px;
+  margin-top: 4px;
+}
+
+.required {
+  color: $secondary;
+  line-height: 1;
+  display: block;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -8px;
+  margin-right: -10px;
+}
+
+.input {
+  &:hover,
+  &:active {
+    outline: 1px solid $focus;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+  }
+}

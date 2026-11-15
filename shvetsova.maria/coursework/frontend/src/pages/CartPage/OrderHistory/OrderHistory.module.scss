@@ -1,0 +1,86 @@
+.message {
+  margin-top: 32px;
+  font-size: 16px;
+  color: $grey;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px -40px 0;
+}
+
+.order {
+  padding: 32px 40px;
+  border-radius: $radius-s;
+  background-color: $white;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid $input;
+}
+
+.number {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 14px;
+  color: $grey;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 2px solid $input;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 120px 160px;
+  align-items: baseline;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.name {
+  min-width: 0;
+  padding-right: 24px;
+}
+
+.quantity {
+  color: $grey;
+}
+
+.price {
+  font-weight: 500;
+  text-align: right;
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 20px;
+}
+
+.meta {
+  font-size: 14px;
+  color: $grey;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+}

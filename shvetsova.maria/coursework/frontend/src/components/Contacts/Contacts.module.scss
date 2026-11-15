@@ -1,0 +1,28 @@
+.section {
+  margin-bottom: 120px;
+}
+
+.title {
+  margin-bottom: 57px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.inner {
+  margin: auto 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

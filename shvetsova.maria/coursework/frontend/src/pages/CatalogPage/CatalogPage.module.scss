@@ -1,0 +1,62 @@
+.page {
+  padding-top: 70px;
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(4, 286px);
+  gap: 32px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.main {
+  grid-column: span 3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 32px;
+  margin-bottom: 80px;
+}
+
+.card {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    z-index: -67;
+    background-color: $white;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-card;
+    opacity: 0;
+    transition: opacity $transition;
+  }
+
+  &:hover {
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.pagination {
+  margin-top: 80px;
+}
+
+.filters {
+}
+
+.message {
+  font-style: 32px;
+  font-weight: 600;
+  margin-top: 32px;
+}

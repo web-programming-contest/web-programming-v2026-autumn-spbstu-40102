@@ -1,0 +1,38 @@
+.page {
+  flex: 1;
+  padding: 80px 0;
+  background-color: $bg;
+}
+
+.tabs {
+  display: inline-flex;
+  margin-left: -42px;
+  border-bottom: 2px solid $inactive-tab;
+}
+
+.tab {
+  margin-bottom: -2px;
+  padding: 0 42px 16px;
+  border: none;
+  border-bottom: 4px solid transparent;
+  background: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+  transition: color $transition;
+
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+.activeTab {
+  border-bottom-color: $primary;
+  color: $black;
+  cursor: default;
+
+  &:hover {
+    color: $black;
+  }
+}

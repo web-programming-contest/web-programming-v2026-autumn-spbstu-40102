@@ -1,0 +1,68 @@
+.item {
+  display: grid;
+  grid-template-columns: 32px 168px 436px 212px 212px 1fr;
+  align-items: start;
+}
+
+.checkbox {
+  align-self: center;
+  justify-self: start;
+}
+
+.imageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 148px;
+  height: 148px;
+  overflow: hidden;
+  border-radius: $radius-m;
+  background-color: $input;
+  padding: 12px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.name {
+  max-width: 340px;
+  padding-top: 6px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.price {
+  padding-top: 2px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.remove {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-self: start;
+  padding: 4px 0 0;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: $secondary;
+  cursor: pointer;
+  transition: color $transition;
+
+  &::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: currentColor;
+    mask: url('@/assets/icons/close.svg') center / contain no-repeat;
+  }
+
+  &:hover {
+    color: $secondary-hover;
+  }
+}

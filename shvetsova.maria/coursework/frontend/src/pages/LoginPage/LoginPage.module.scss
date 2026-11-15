@@ -1,0 +1,56 @@
+.page {
+  background-color: $login-bg;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::before {
+    background-image: url('@/assets/images/login-left.webp');
+    right: calc(50% + 191px);
+  }
+
+  &::after {
+    background-image: url('@/assets/images/login-right.webp');
+    left: calc(50% + 191px);
+  }
+}
+
+.content {
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: $radius-s;
+  gap: 32px;
+  padding: 48px;
+}
+
+.modalTitle {
+}
+
+.modalText {
+}

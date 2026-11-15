@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.window {
+  position: relative;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  border-radius: $radius-3xl;
+}
+
+.s {
+  width: 600px;
+  padding: 45px 60px;
+}
+
+.l {
+  padding: 106px 138px;
+}
+
+.close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background-color: #aebddb;
+  mask: url('@/assets/icons/close.svg') center / contain no-repeat;
+  cursor: pointer;
+  transition: background-color $transition;
+
+  &:hover {
+    background-color: $primary;
+  }
+}

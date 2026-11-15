@@ -1,0 +1,27 @@
+.sorting {
+}
+
+.chip {
+  line-height: 1.5;
+  padding: 4px 12px;
+  border-radius: 0;
+  border: none;
+
+  background-color: $white;
+  color: $primary;
+
+  padding: 4px 0 0;
+  margin: 0 12px;
+  border-bottom: 2px $primary dashed;
+
+  cursor: pointer;
+}
+
+.active {
+  margin: 0;
+  padding: 4px 12px;
+  border-radius: $radius-s;
+  background-color: $primary-disabled;
+  color: $white;
+  border: none;
+}

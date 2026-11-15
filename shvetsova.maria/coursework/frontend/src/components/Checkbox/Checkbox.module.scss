@@ -1,0 +1,64 @@
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: -4px -8px;
+  padding: 4px 8px;
+  border-radius: $radius-s;
+  cursor: pointer;
+  transition: background-color $transition;
+
+  &:hover {
+    background-color: $bg;
+  }
+
+  &:has(.input:focus-visible) {
+    outline: 2px solid $focus;
+  }
+
+  &:has(.input:disabled) {
+    color: $inactive;
+    cursor: default;
+  }
+
+  &:has(.input:disabled):hover {
+    background-color: transparent;
+  }
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.box {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: $radius-xs;
+  background-color: $input;
+  transition: background-color $transition;
+}
+
+.input:checked + .box {
+  background-color: $primary;
+  background-image: url('@/assets/icons/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input:disabled + .box {
+  opacity: 0.5;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 24px;
+
+  &:empty {
+    display: none;
+  }
+}
