@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мои библиотеки</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <p class="eyebrow">Лабораторная работа 4</p>
+        <h1>Мои библиотеки</h1>
+        <p>
+          Соберите книги в библиотеки. Ваша коллекция сохраняется в этом
+          браузере.
+        </p>
+      </header>
+
+      <div class="workspace">
+        <aside class="forms" aria-label="Управление коллекцией">
+          <section class="panel" aria-labelledby="library-heading">
+            <h2 id="library-heading">Новая библиотека</h2>
+            <form data-testid="entity-form">
+              <fieldset>
+                <legend class="visually-hidden">Добавление библиотеки</legend>
+                <label for="library-name">Название библиотеки</label>
+                <input
+                  id="library-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Например, Домашняя"
+                />
+                <button type="submit">Добавить библиотеку</button>
+              </fieldset>
+            </form>
+          </section>
+
+          <section class="panel" aria-labelledby="book-heading">
+            <h2 id="book-heading">Новая книга</h2>
+            <p id="book-hint" class="hint">Сначала добавьте библиотеку.</p>
+            <form class="book-form">
+              <fieldset disabled aria-describedby="book-hint">
+                <legend class="visually-hidden">Добавление книги</legend>
+                <label for="book-library">Библиотека</label>
+                <select id="book-library" name="library" required></select>
+                <label for="book-title">Название книги</label>
+                <input id="book-title" name="title" type="text" required />
+                <label for="book-author">Автор</label>
+                <input id="book-author" name="author" type="text" required />
+                <div class="field-pair">
+                  <div>
+                    <label for="book-year">Год издания</label>
+                    <input
+                      id="book-year"
+                      name="year"
+                      type="number"
+                      step="1"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="book-genre">Жанр</label>
+                    <input id="book-genre" name="genre" type="text" required />
+                  </div>
+                </div>
+                <button type="submit">Добавить книгу</button>
+              </fieldset>
+            </form>
+          </section>
+        </aside>
+
+        <section class="collection" aria-labelledby="collection-heading">
+          <div class="collection-header">
+            <h2 id="collection-heading">Коллекция</h2>
+            <p class="collection-count"></p>
+          </div>
+          <p class="status" role="status" aria-live="polite"></p>
+          <div class="library-list" data-testid="entity-list"></div>
+          <section class="panel overview" aria-labelledby="overview-heading">
+            <h2 id="overview-heading">Обзор всех библиотек</h2>
+            <p class="authors-summary"></p>
+            <p class="years-summary"></p>
+          </section>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
