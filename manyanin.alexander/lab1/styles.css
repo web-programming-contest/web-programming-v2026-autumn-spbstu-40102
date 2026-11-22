@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  background-color: #1f2a37;
+}
+
+.menu-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-link {
+  display: block;
+  padding: 16px 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-link:hover,
+.menu-link:focus-visible {
+  background-color: #374151;
+}
+
+.content {
+  padding: 24px;
+}
+
+@media (width <= 767px) {
+  .menu-list {
+    flex-direction: column;
+  }
+
+  .menu-link {
+    border-top: 1px solid #374151;
+  }
+}
