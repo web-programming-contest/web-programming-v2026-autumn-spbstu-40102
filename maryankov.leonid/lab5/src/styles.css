@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  --color-bg: #f2f4f8;
+  --color-surface: #fff;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-border: #d1d5db;
+  --color-accent: #2563eb;
+  --color-button-bg: #e0e7ff;
+  --color-button-text: #1e3a8a;
+
+  min-height: 100vh;
+  padding: 24px 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.app[data-theme='dark'] {
+  --color-bg: #111827;
+  --color-surface: #1f2937;
+  --color-text: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-border: #374151;
+  --color-accent: #60a5fa;
+  --color-button-bg: #374151;
+  --color-button-text: #fde68a;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto 24px;
+}
+
+.app-title {
+  margin: 0;
+}
+
+.theme-toggle {
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.book-card {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.book-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.book-author {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+}
+
+.book-price {
+  margin: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
