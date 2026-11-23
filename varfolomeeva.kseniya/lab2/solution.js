@@ -9,7 +9,7 @@ function expandAroundCenter(str, left, right) {
 
 export function findLongestPalindrome(str) {
   if (str.length === 0) {
-    return "";
+    return str;
   }
 
   let start = 0;
