@@ -1,5 +1,3 @@
-"use strict";
-
 function expandAroundCenter(str, left, right) {
   while (left >= 0 && right < str.length && str[left] === str[right]) {
     left--;
@@ -9,7 +7,7 @@ function expandAroundCenter(str, left, right) {
   return right - left - 1;
 }
 
-function findLongestPalindrome(str) {
+export function findLongestPalindrome(str) {
   if (str.length === 0) {
     return "";
   }
@@ -29,20 +27,4 @@ function findLongestPalindrome(str) {
   }
 
   return str.slice(start, start + maxLength);
-}
-
-const tests = [
-  "babad",
-  "cbbd",
-  "a",
-  "abcde",
-  "racecar",
-  "forgeeksskeegfor",
-  "",
-];
-
-for (const test of tests) {
-  console.log(
-    `findLongestPalindrome("${test}") = "${findLongestPalindrome(test)}"`,
-  );
 }
